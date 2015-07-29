@@ -1,0 +1,100 @@
+@import 'variables';
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	//margin: 0 auto;
+	background: $back_color;
+	color: $text_color;
+	font-family: $default_font;
+}
+header, nav, section{
+	display: block;
+}
+.container{
+	width: $container_width;
+	margin: 10px auto;
+	text-align: left;
+}
+#top{
+	display: inline-block;
+	float: left;
+	margin-left: $top_marg_left;
+}
+nav{
+		height: $nav_height;
+	background: $nav_color;
+	border-radius: $default_radius;
+	margin-bottom: $nav_marg_bottom;
+		ul{
+
+			float: right;
+			margin-right: $nav_ul_marg_right;
+			margin-top: $nav_ul_marg_top;
+			li{
+				display: inline-block;
+				list-style: none;
+				a{
+					color: $text_color;
+				}
+			}
+		}
+
+}
+section{
+	//float: left;
+	margin-left: $section_margin_left;
+	text-align: center;	
+}
+
+// importing image values
+@import 'image';
+
+// applying responsive design to bottom section at screen size 992 pixels and smaller
+@media(max-width: 992px){
+	.bottomSection{
+		width: $var_width1;
+		h4{
+			text-align: center;
+			margin: $bottom_para_margin;
+		}
+		p{
+		margin-left: 95px;	
+		}		
+	}
+}
+
+// applying responsive design to bottom section at screen size 768 pixels and smaller
+@media(max-width: 768px){
+	.bottomSection{		
+		width: $var_width2;
+		h4{
+			text-align: center;
+			margin: $bottom_para_margin;
+		}
+		p{
+		margin-left: 55px;	
+		}		
+	}
+}
+
+// default settings for bottom section
+.bottomSection{
+	margin: $bottom_margin;
+	h4{
+		text-align: center;
+		margin: $bottom_para_margin;
+	}
+	p{
+		margin-top: 5px;
+		margin-right: 5px;
+		padding: 5px;
+		}
+}
+
+footer{
+	text-align: left;
+	margin: 15px;
+}

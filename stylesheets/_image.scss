@@ -1,0 +1,34 @@
+img{
+
+	width: $thumb_width;
+	height: $thumb_height;
+}
+
+// default settings for thumbnail class
+.thumbnail{
+	@extend img;
+	border-radius: $default_radius;
+	border: $thumb_border;
+	margin: $image_marg;
+
+}
+
+// applying responsive design to thumbnail class at screen size 992 pixels and smaller
+@media (max-width: 992px) {
+	.thumbnail{
+		width: $var_width1;
+		height: $var_width1*(.75);
+		display: block;
+		margin-left: 65px;
+	}
+}
+
+// applying responsive design to thumbnail class at screen size 768 pixels and smaller
+@media (max-width: 768px) {
+	.thumbnail{
+		width: $var_width2;
+		height: $var_width1*(.75);
+		display: block;
+		margin-left: 65px;
+	}
+}
