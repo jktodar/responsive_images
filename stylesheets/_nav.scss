@@ -1,0 +1,27 @@
+nav{
+	height: $nav_height;
+	width: 100%;
+	background: $nav_color;
+	border-radius: $default_radius;
+	margin-bottom: $nav_marg_bottom;
+		ul{
+
+			float: right;
+			margin-right: $nav_ul_marg_right;
+			margin-top: $nav_ul_marg_top;
+			li{
+				display: inline-block;
+				list-style: none;
+				a{
+					color: $text_color;
+				}
+			}
+		}
+
+}
+@media(max-width:992px){
+	nav{
+		width: 95vw;
+		margin-left: 10px;
+	}
+}
